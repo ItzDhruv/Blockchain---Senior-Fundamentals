@@ -6,12 +6,20 @@ One of the most infamous **delegate call vulnerabilities** was the **Parity Wall
 
 ---
 
+## Store data in caller or called contracrt
+
+![alt text](image.png)
+
+
+![alt text](image-1.png)
+
+
+![alt text](image-2.png)
+
+
 ## Delegate Call Attack Example
 
 This project demonstrates how a **delegate call attack** works in Solidity smart contracts and how to prevent it. **Delegate call allows a contract to execute another contract's code while preserving its own storage.**  
-
-### How a Delegate Call Attack Looks Like
-![alt text](image.png)
 
 ### How It Works
 1. A contract (`Proxy`) uses `delegatecall` to execute another contract's (`LogicContract`) code.
@@ -19,15 +27,6 @@ This project demonstrates how a **delegate call attack** works in Solidity smart
 3. If the `LogicContract` is **malicious** or **upgraded improperly**, an attacker can use `delegatecall` to modify **critical storage variables** in `Proxy` (like changing the owner).
 4. The attacker can then **gain full control of the contract**.
 
-### Store data in caller or called contracrt
-- **Using call**
----
-![alt text](image.png)
-
-- **Using delegatecall**
-![alt text](image-1.png)
-- **Differnce between cal and deegate call**
-![alt text](image-2.png)
 
 ### Features
 - **Exploit Demonstration** using a vulnerable proxy contract.
