@@ -3,7 +3,10 @@
 This smart contract implements a Merkle Tree-based airdrop, allowing eligible users to claim their airdrop securely and efficiently.
 ## A typical Merkle Tree looks something like this:
 ![alt text](image.png)
-![img alt]()
+
+## How it verify Address
+
+![alt text](image-1.png)
 ## How It Works
 1. The contract is deployed with a **Merkle Root** generated off-chain.
 2. Users submit a **Merkle Proof** to verify their eligibility.
